@@ -1,4 +1,4 @@
-# ArcaneEye
+# Arcane Eye
 Arcane Eye is a discord bot that serves information about the strategy card game Wizards of the Grimoire
 
 ## /card
