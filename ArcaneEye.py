@@ -7,11 +7,13 @@ import logging.handlers
 import json
 import typing
 
+# loads the card information from JSON file
 with open('wotgcards.json') as cards_file:
 	cards = json.load(cards_file)
 	names = cards.keys()
 
-def run_discord_bot():
+# run command for the bot, named open_eye for aesthetics 
+def open_eye():
 	### set up logging ###
 	logger = logging.getLogger('discord')
 	logger.setLevel(logging.INFO)
@@ -41,6 +43,7 @@ def run_discord_bot():
 		except Exception as e:
 			print(e) 
 
+	### /card command ###
 	@bot.tree.command(name="card", description="Display an image of the requested card. Spelling must be exact, but the name isn't case sensitive.")
 	@app_commands.describe(card_name="The exact name of the card.")
 	@app_commands.rename(card_name="name")
@@ -50,6 +53,7 @@ def run_discord_bot():
 		else: #responds to just the caller to let them know a card wasn't found if name is invalid
 			await interaction.response.send_message(f"I can't find a card named {card_name}.", ephemeral=True)
 
+	# autocomplete function for /card
 	@show_card.autocomplete("card_name")
 	async def sc_autocomp(interaction: discord.Interaction, current: str) -> typing.List[app_commands.Choice[str]]:
 		matches = []
@@ -60,6 +64,7 @@ def run_discord_bot():
 					break
 		
 		return matches
+	### /card command end ###
 
 	#log_handler set to None as we set up our own logging above
 	bot.run(TOKEN, log_handler=None)
