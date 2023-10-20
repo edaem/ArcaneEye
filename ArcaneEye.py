@@ -31,20 +31,20 @@ def open_eye():
 	### end logging setup ###
 
 	# instance a Bot
-	bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
+	eye = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
 	# on ready event
-	@bot.event
+	@eye.event
 	async def on_ready():
 		print(f"The Arcane Eye has opened.")
 		try:
-			synced = await bot.tree.sync()
+			synced = await eye.tree.sync()
 			print(f"Synced {len(synced)} command(s)")
 		except Exception as e:
 			print(e) 
 
 	### /card command ###
-	@bot.tree.command(name="card", description="Display an image of the requested card. Spelling must be exact, but the name isn't case sensitive.")
+	@eye.tree.command(name="card", description="Display an image of the requested card. Spelling must be exact, but the name isn't case sensitive.")
 	@app_commands.describe(card_name="The exact name of the card.")
 	@app_commands.rename(card_name="name")
 	async def show_card(interaction: discord.Interaction, card_name: str):
@@ -58,13 +58,13 @@ def open_eye():
 	async def sc_autocomp(interaction: discord.Interaction, current: str) -> typing.List[app_commands.Choice[str]]:
 		matches = []
 		for cname in names:
-			if current.lower() in cname:
+			if current.lower() in cname: #adds card name to choices if the current string is a substring of the name
 				matches.append(app_commands.Choice(name=cname.title(), value=cname))
-				if len(matches) >= 25:
+				if len(matches) >= 25: #can only return max 25 choices at a time
 					break
 		
 		return matches
 	### /card command end ###
 
 	#log_handler set to None as we set up our own logging above
-	bot.run(TOKEN, log_handler=None)
+	eye.run(TOKEN, log_handler=None)
