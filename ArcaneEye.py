@@ -71,7 +71,7 @@ def open_eye():
 	@app_commands.describe(public = "Enter true to have the bot publically respond with the link. False will be just to you. Defaults to false.")
 	async def share_gallery(interaction: discord.Interaction, public: str = None):
 		if public is None:
-			ephem = False
+			ephem = True
 		else:
 			ephem = False if public.lower() == "true" else True
 		await interaction.response.send_message("https://imgur.com/a/X0mNcbZ", ephemeral=ephem)
