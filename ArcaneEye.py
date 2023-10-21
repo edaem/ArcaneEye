@@ -47,6 +47,7 @@ def open_eye():
 	@eye.tree.command(name="card", description="Display an image of the requested card. Spelling must be exact, but the name isn't case sensitive.")
 	@app_commands.describe(card_name="The exact name of the card.")
 	@app_commands.rename(card_name="name")
+	@app_commands.describe(public="Not required (defaults to true). Responds publicly if true, and as a message only you can see if false.")
 	async def show_card(interaction: discord.Interaction, card_name: str, public: typing.Literal['true','false', None]):
 		if public is None:
 			public = True
