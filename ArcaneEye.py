@@ -47,10 +47,8 @@ def open_eye():
 	@eye.tree.command(name="card", description="Display an image of the requested card. Spelling must be exact, but the name isn't case sensitive.")
 	@app_commands.describe(card_name="The exact name of the card.")
 	@app_commands.rename(card_name="name")
-	@app_commands.describe(public="Not required (defaults to true). Responds publicly if true, and as a message only you can see if false.")
-	async def show_card(interaction: discord.Interaction, card_name: str, public: typing.Literal['true','false', None]):
-		if public is None:
-			public = True
+	@app_commands.choices(public=[app_commands.Choice(name="true", value=True),app_commands.Choice(name="false", value=False)])
+	async def show_card(interaction: discord.Interaction, card_name: str, public: app_commands.Choice[bool]):
 		if card_name in cards: #sends image if card name is valid
 			await interaction.response.send_message(f"{cards[card_name.lower()]['Link']}", ephemeral= not public)
 		else: #responds to just the caller to let them know a card wasn't found if name is invalid
