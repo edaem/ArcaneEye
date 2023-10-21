@@ -76,7 +76,7 @@ def open_eye():
 			public = True
 		else:
 			public = False
-		await interaction.response.send_message("https://imgur.com/a/X0mNcbZ", ephemeral=True)
+		await interaction.response.send_message("https://imgur.com/a/X0mNcbZ", ephemeral=public)
 	### /gallery command end ###
 
 	#log_handler set to None as we set up our own logging above
