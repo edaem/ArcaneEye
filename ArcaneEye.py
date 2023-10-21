@@ -48,7 +48,7 @@ def open_eye():
 	@app_commands.describe(card_name="The exact name of the card.")
 	@app_commands.rename(card_name="name")
 	@app_commands.describe(public = "Optional. Enter true to have the bot publically respond with the card. False will be just to you. Defaults to true.")
-	async def show_card(interaction: discord.Interaction, card_name: str, public: str = None):
+	async def show_card(interaction: discord.Interaction, card_name: str, public: typing.Literal['true','false'] = None):
 		if public is None:
 			ephem = False
 		else:
@@ -74,7 +74,7 @@ def open_eye():
 	### /gallery command ###
 	@eye.tree.command(name="gallery", description="Provides link to the imgur gallery of card images.")
 	@app_commands.describe(public = "Optional. Enter true to have the bot publically respond with the link. False will be just to you. Defaults to false.")
-	async def share_gallery(interaction: discord.Interaction, public: str = None):
+	async def share_gallery(interaction: discord.Interaction, public: typing.Literal['true','false'] = None):
 		if public is None:
 			ephem = True
 		else:
