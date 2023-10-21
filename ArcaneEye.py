@@ -47,15 +47,16 @@ def open_eye():
 	@eye.tree.command(name="card", description="Display an image of the requested card. Spelling must be exact, but the name isn't case sensitive.")
 	@app_commands.describe(card_name="The exact name of the card.")
 	@app_commands.rename(card_name="name")
+	@app_commands.describe(public = "Optional. Enter true to have the bot publically respond with the card. False will be just to you. Defaults to true.")
 	async def show_card(interaction: discord.Interaction, card_name: str, public: str = None):
 		if public is None:
-			ephem = True
+			ephem = False
 		else:
-			ephem = False if public.lower() == "true" else True
+			ephem = True if public.lower() == "false" else False
 		if card_name in cards: #sends image if card name is valid
-			await interaction.response.send_message(f"{cards[card_name.lower()]['Link']}")
+			await interaction.response.send_message(f"{cards[card_name.lower()]['Link']}", ephemeral=ephem)
 		else: #responds to just the caller to let them know a card wasn't found if name is invalid
-			await interaction.response.send_message(f"I can't find a card named {card_name}.", ephemeral=ephem)
+			await interaction.response.send_message(f"I can't find a card named {card_name}.", ephemeral=True)
 
 	# autocomplete function for /card
 	@show_card.autocomplete("card_name")
@@ -72,7 +73,7 @@ def open_eye():
 
 	### /gallery command ###
 	@eye.tree.command(name="gallery", description="Provides link to the imgur gallery of card images.")
-	@app_commands.describe(public = "Enter true to have the bot publically respond with the link. False will be just to you. Defaults to false.")
+	@app_commands.describe(public = "Optional. Enter true to have the bot publically respond with the link. False will be just to you. Defaults to false.")
 	async def share_gallery(interaction: discord.Interaction, public: str = None):
 		if public is None:
 			ephem = True
