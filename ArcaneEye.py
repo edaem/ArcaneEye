@@ -49,7 +49,7 @@ def open_eye():
 	@app_commands.rename(card_name="name")
 	@app_commands.choices(public=[app_commands.Choice(name="true", value=1),app_commands.Choice(name="false", value=2)])
 	async def show_card(interaction: discord.Interaction, card_name: str, public: app_commands.Choice[int]):
-		public = True if public == 1 else False
+		public = True if public is 1 else False
 		if card_name in cards: #sends image if card name is valid
 			await interaction.response.send_message(f"{cards[card_name.lower()]['Link']}", ephemeral= not public)
 		else: #responds to just the caller to let them know a card wasn't found if name is invalid
