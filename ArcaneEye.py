@@ -47,11 +47,15 @@ def open_eye():
 	@eye.tree.command(name="card", description="Display an image of the requested card. Spelling must be exact, but the name isn't case sensitive.")
 	@app_commands.describe(card_name="The exact name of the card.")
 	@app_commands.rename(card_name="name")
-	async def show_card(interaction: discord.Interaction, card_name: str):
+	async def show_card(interaction: discord.Interaction, card_name: str, public: str = None):
+		if public is None:
+			ephem = True
+		else:
+			ephem = False if public.lower() == "true" else True
 		if card_name in cards: #sends image if card name is valid
 			await interaction.response.send_message(f"{cards[card_name.lower()]['Link']}")
 		else: #responds to just the caller to let them know a card wasn't found if name is invalid
-			await interaction.response.send_message(f"I can't find a card named {card_name}.", ephemeral=True)
+			await interaction.response.send_message(f"I can't find a card named {card_name}.", ephemeral=ephem)
 
 	# autocomplete function for /card
 	@show_card.autocomplete("card_name")
