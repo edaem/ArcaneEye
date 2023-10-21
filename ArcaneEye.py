@@ -70,13 +70,8 @@ def open_eye():
 	@eye.tree.command(name="gallery", description="Provides link to the imgur gallery of card images.")
 	@app_commands.describe(public = "Enter true to have the bot publically respond with the link. False will be just to you. Defaults to false.")
 	async def share_gallery(interaction: discord.Interaction, public: str = None):
-		if public is None:
-			public = False
-		elif public.lower() == "true":
-			public = True
-		else:
-			public = False
-		await interaction.response.send_message("https://imgur.com/a/X0mNcbZ", ephemeral=public)
+		ephem:bool = True if public.lower() == "true" else False
+		await interaction.response.send_message("https://imgur.com/a/X0mNcbZ", ephemeral=ephem)
 	### /gallery command end ###
 
 	#log_handler set to None as we set up our own logging above
