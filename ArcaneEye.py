@@ -93,3 +93,5 @@ def smart_title(input:str) -> str:
 			edited.append(word)
 		else:
 			edited.append(word.capitalize())
+	
+	return " ".join(edited)
