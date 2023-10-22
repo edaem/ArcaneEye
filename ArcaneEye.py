@@ -64,7 +64,7 @@ def open_eye():
 		matches = []
 		for cname in names:
 			if current.lower() in cname: #adds card name to choices if the current string is a substring of the name
-				matches.append(app_commands.Choice(name=cname.title(), value=cname))
+				matches.append(app_commands.Choice(name=smart_title(cname), value=cname))
 				if len(matches) >= 25: #can only return max 25 choices at a time
 					break
 		
@@ -84,3 +84,12 @@ def open_eye():
 
 	#log_handler set to None as we set up our own logging above
 	eye.run(TOKEN, log_handler=None)
+
+def smart_title(input:str) -> str:
+	words = input.split(" ")
+	edited = []
+	for word in words:
+		if word in ["of", "the", "a"]:
+			edited.append(word)
+		else:
+			edited.append(word.capitalize())
