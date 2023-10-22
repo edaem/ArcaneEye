@@ -70,6 +70,20 @@ def open_eye():
 		
 		return matches
 	### /card command end ###
+	
+	@eye.tree.command(name="repertoire", description="Display up to 6 imgages in one message (a full repertoire).")
+	async def multicard(interaction: discord.Interaction, c1:str, c2:str = None, c3:str = None, c4:str = None, c5:str = None, c6:str = None):
+		req = []
+		for cin in [c1,c2,c3,c4,c5,c6]:
+			if cin is not None:
+				if cin.lower() in names:
+					req.append(cin)
+		
+		if len(req) > 0:
+			links=[]
+			for c in req:
+				links.append(cards[c.lower()]['Link'])	
+			await interaction.response.send_message(" ".join(links))
 
 	### /gallery command ###
 	@eye.tree.command(name="gallery", description="Provides link to the imgur gallery of card images.")
