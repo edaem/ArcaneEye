@@ -85,6 +85,7 @@ def open_eye():
 	#log_handler set to None as we set up our own logging above
 	eye.run(TOKEN, log_handler=None)
 
+# returns a titled string like str's .title() function, but ignores words like 'of' and 'the'
 def smart_title(input:str) -> str:
 	words = input.split(" ")
 	edited = []
