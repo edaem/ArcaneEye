@@ -9,7 +9,7 @@
    },
    "aftershock": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Gain 1 mana card. Place 1 mana card on the mana deck and deal damage equal to its power",
@@ -17,7 +17,7 @@
    },
    "amnesia": {
       "Set": "Lost Pages",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 1,
       "Text": "Deal 1 damage. Deal 1 additional damage for each time this spell was cast previously this turn",
@@ -41,7 +41,7 @@
    },
    "bad fortune": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Deal 4 damage. Reveal 3 cards from the mana deck. Place any revealed 1 power mana on this spell. Return the rest in any order",
@@ -57,7 +57,7 @@
    },
    "betrayal": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Deal 5 damage. Your opponent gains 3 mana cards",
@@ -65,7 +65,7 @@
    },
    "blood lust": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Deal 1 damage. Deal an additional 2 damage for each attack spell cast consecutively before this spell",
@@ -81,7 +81,7 @@
    },
    "contamination": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Place 2 mana cards from your hand on the mana deck. If you do, deal 4 damage",
@@ -89,7 +89,7 @@
    },
    "crushing blow": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 5,
       "Text": "Deal 6 damage",
@@ -97,7 +97,7 @@
    },
    "dance of pain": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Deal 3 damage. Discard or gain mana until you have 2 mana cards in your hand",
@@ -105,7 +105,7 @@
    },
    "delusion": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Deal 3 damage. You may pick up a mana card off 1 of your opponent's spells",
@@ -113,7 +113,7 @@
    },
    "doom drop": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Delayed",
       "Cost": 3,
       "Text": "Each time a mana card is discarded of this spell, deal damage equal to that mana's power",
@@ -121,7 +121,7 @@
    },
    "drain soul": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Your opponent must give you the highest power card mana in their hand. Deal damage equal to that mana's power",
@@ -145,7 +145,7 @@
    },
    "energy storm": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Deal 3 damage. Deal 1 additional damage for each 4 power mana in your hand",
@@ -153,7 +153,7 @@
    },
    "false face": {
       "Set": "Lost Pages",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "On-Going",
       "Cost": 1,
       "Text": "If you deal 1 or less damage during your basic attack phase, deal 3 damage when your turn ends",
@@ -161,7 +161,7 @@
    },
    "fatal flaw": {
       "Set": "Lost Pages",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Deal 1 damage. Reveal the top mana card on 1 of your opponents spells, dealing additional damage equal to it's power",
@@ -169,7 +169,7 @@
    },
    "fire blast": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Discard all mana in your hand. Deal 7 damage",
@@ -177,7 +177,7 @@
    },
    "force of nature": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Deal 4 damage, minus 1 damage for each of your other attack spells that have mana on them",
@@ -209,7 +209,7 @@
    },
    "fury": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 4,
       "Text": "Deal 1 damage for each of your opponent's spells that have mana on them",
@@ -233,7 +233,7 @@
    },
    "guilty bond": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 1,
       "Text": "Show your opponent a mana from your hand. Deal 2 damage if they have a mana of the same power in their hand",
@@ -249,7 +249,7 @@
    },
    "hellstorm": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 4,
       "Text": "Gain 5 mana cards. Deal damage equal to the highest power mana you gain",
@@ -257,7 +257,7 @@
    },
    "hoodwink": {
       "Set": "Lost Pages",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Deal 6 damage, minus the damage your opponent dealt their last basic attack phase",
@@ -265,7 +265,7 @@
    },
    "ice storm": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Deal 1 damage for each of your spells with exactly 1 mana card on them",
@@ -297,7 +297,7 @@
    },
    "mist of pain": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Your opponent may discard up to 4 mana cards from their hand. For each mana they do not discard, deal 1 damage",
@@ -305,7 +305,7 @@
    },
    "mutation": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Gain 1 mana card. Deal damage equal to that mana's power",
@@ -313,7 +313,7 @@
    },
    "overload": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Deal damage equal to the quantity of mana cards on 1 of your opponent's spell",
@@ -321,7 +321,7 @@
    },
    "painful vision": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Deal 5 damage. Place a mana from the mana deck on all your spells with 1 mana card on them",
@@ -329,7 +329,7 @@
    },
    "possessed": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Deal 5 damage. Your opponent may give you a mana from their hand. If they do, reduce your damage by the mana's power",
@@ -361,7 +361,7 @@
    },
    "reckless attack": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Delayed",
       "Cost": 1,
       "Text": "Deal 1 damage each time you discard off this spell. If you discard a 4 power mana off this spell, deal 4 damage instead",
@@ -393,7 +393,7 @@
    },
    "second strike": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Deal 3 damage. The next time you cast an attack spell this turn, it costs 1 less",
@@ -417,7 +417,7 @@
    },
    "shadow attack": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 4,
       "Text": "Discard a mana card off 1 of your other spells. Deal damage and gain mana equal to that mana's power",
@@ -465,7 +465,7 @@
    },
    "stone crush": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Deal 1 damage for each mana card in your opponent's hand",
@@ -481,7 +481,7 @@
    },
    "touch the void": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Deal damage equal to the quantity of mana cards on 1 of your spells",
@@ -489,7 +489,7 @@
    },
    "toxic gift": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 1,
       "Text": "Give your opponent a mana card from your hand. If you do, deal damage equal to its power",
@@ -497,7 +497,7 @@
    },
    "trance state": {
       "Set": "Advanced",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 1,
       "Text": "Deal 3 damage, minus 1 damage for each mana card in your hand",
@@ -505,7 +505,7 @@
    },
    "trap attack": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Pick up a mana card off 1 of your other spells. Deal damage equal to that mana's power",
@@ -513,7 +513,7 @@
    },
    "tsunami": {
       "Set": "Lost Pages",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 2,
       "Text": "Gain 1 mana card. Deal 1 damage for each mana of a unique power in your hand",
@@ -521,7 +521,7 @@
    },
    "twist of fate": {
       "Set": "Lost Pages",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Deal 2 damage. You may discard and replace 1 of your other spells with a new spell. Move all mana on it onto the new spell",
@@ -529,7 +529,7 @@
    },
    "vile laughter": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 3,
       "Text": "Deal 6 damage, minus the highest power mana in your hand",
@@ -545,7 +545,7 @@
    },
    "windstorm": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 1,
       "Text": "Deal 2 damage, then reveal a mana card from the mana deck. If it's a 1 power mana card, place it on this spell",
@@ -553,7 +553,7 @@
    },
    "wrath": {
       "Set": "Beginner",
-      "Type": "Damage",
+      "Type": "Attack",
       "Activation": "Instant",
       "Cost": 1,
       "Text": "Your opponent may discard 2 mana cards from their hand. If they do not, deal 2 damage",
