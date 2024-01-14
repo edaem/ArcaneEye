@@ -89,10 +89,10 @@ def open_eye():
 def smart_title(input:str) -> str:
 	words = input.split(" ")
 	edited = []
-	for word in words:
-		if word in ["of", "the", "a"]:
-			edited.append(word)
+	for w in words:
+		if w in ["of", "the", "a"]:
+			edited.append(w)
 		else:
-			edited.append(word.capitalize())
+			edited.append(w.capitalize())
 	
 	return " ".join(edited)
