@@ -82,6 +82,20 @@ def open_eye():
 		await interaction.response.send_message("https://imgur.com/a/X0mNcbZ", ephemeral=ephem)
 	### /gallery command end ###
 
+	@eye.tree.command(name="text", description="Returns card info as text. Spelling must be exact, but the name isn't case sensitive.")
+	@app_commands.describe(card_name="The exact name of the card.")
+	@app_commands.rename(card_name="name")
+	@app_commands.describe(public = "Optional. Enter true to have the bot publically respond with the card. False will be just to you. Defaults to true.")
+	async def card_text(interaction: discord.Interaction, card_name: str, public: typing.Literal['true', 'false'] = None):
+		if public is None:
+			ephem = False
+		else:
+			ephem = True if public.lower() == "false" else False
+		if card_name in cards: #sends image if card name is valid
+			await interaction.response.send_message(f"{compile_info(card_name.lower())}", ephemeral=ephem)
+		else: #responds to just the caller to let them know a card wasn't found if name is invalid
+			await interaction.response.send_message(f"I can't find a card named {card_name}.", ephemeral=True)
+
 	#log_handler set to None as we set up our own logging above
 	eye.run(TOKEN, log_handler=None)
 
@@ -96,3 +110,9 @@ def smart_title(input:str) -> str:
 			edited.append(w.capitalize())
 	
 	return " ".join(edited)
+
+def compile_info(card_name:str) -> str:
+	output = ""
+	if card_name in cards:
+		output += smart_title(card_name) + " | " + cards[card_name.lower()]['Type'] + " | " + cards[card_name.lower()]['Activation']
+	return output
