@@ -82,7 +82,7 @@ def open_eye():
 		await interaction.response.send_message("https://imgur.com/a/X0mNcbZ", ephemeral=ephem)
 	### /gallery command end ###
 
-	@eye.tree.command(name="text", description="Returns card info as text. Spelling must be exact, but the name isn't case sensitive.")
+	@eye.tree.command(name="card_text", description="Returns card info as text. Spelling must be exact, but the name isn't case sensitive.")
 	@app_commands.describe(card_name="The exact name of the card.")
 	@app_commands.rename(card_name="name")
 	@app_commands.describe(public = "Optional. Enter true to have the bot publically respond with the card. False will be just to you. Defaults to true.")
@@ -91,11 +91,20 @@ def open_eye():
 			ephem = False
 		else:
 			ephem = True if public.lower() == "false" else False
-		if card_name in cards: #sends image if card name is valid
+		if card_name in cards: #sends text if card name is valid
 			await interaction.response.send_message(f"{compile_info(card_name.lower())}", ephemeral=ephem)
 		else: #responds to just the caller to let them know a card wasn't found if name is invalid
 			await interaction.response.send_message(f"I can't find a card named {card_name}.", ephemeral=True)
-
+	@card_text.autocomplete("card_name")
+	async def ct_autocomp(interaction: discord.Interaction, current: str) -> typing.List[app_commands.Choice[str]]:
+		matches = []
+		for cname in names:
+			if current.lower() in cname: #adds card name to choices if the current string is a substring of the name
+				matches.append(app_commands.Choice(name=smart_title(cname), value=cname))
+				if len(matches) >= 25: #can only return max 25 choices at a time
+					break
+		
+		return matches
 	#log_handler set to None as we set up our own logging above
 	eye.run(TOKEN, log_handler=None)
 
@@ -111,8 +120,10 @@ def smart_title(input:str) -> str:
 	
 	return " ".join(edited)
 
+# returns a string detailing a cards name, type, activation type, and card text
 def compile_info(card_name:str) -> str:
 	output = ""
 	if card_name in cards:
-		output += smart_title(card_name) + " | " + cards[card_name.lower()]['Type'] + " | " + cards[card_name.lower()]['Activation']
+		output += smart_title(card_name) + "\n" + cards[card_name.lower()]['Type'] + " | " + cards[card_name.lower()]['Activation']
+		output += " | Cost: " + str(cards[card_name.lower()]['Cost']) + "\n" + cards[card_name.lower()]['Text']
 	return output
