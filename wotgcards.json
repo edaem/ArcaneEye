@@ -558,5 +558,69 @@
       "Cost": 1,
       "Text": "Your opponent may discard 2 mana cards from their hand. If they do not, deal 2 damage",
       "Link": "https://i.imgur.com/x4QcRPo.png"
+   },
+   "backfire": {
+      "Set": "Shifting Sands",
+      "Type": "Attack",
+      "Activation": "Instant",
+      "Cost": 1,
+      "Text": "Your opponent gains 1 mana card. They take damage equal to its power",
+      "Link": "https://i.imgur.com/9364No0.png"
+   },
+   "death spiral": {
+      "Set":"Shifting Sands",
+      "Type":"Attack",
+      "Activation":"Instant",
+      "Cost": 2,
+      "Text": "This spell costs 0 if the previous spell you cast cost 3 or more. Deal 2 damage",
+      "Link": "https://i.imgur.com/cabE3np.png"
+   },
+   "echo": {
+      "Set":"Shifting Sands",
+      "Type":"Attack",
+      "Activation":"Instant",
+      "Cost": 3,
+      "Text": "Deal 3 damage. If you cast 1 of your other instant spells immediately before this and it cost 1 or less, this spell gains that spell's effect",
+      "Link": "https://i.imgur.com/w0OlwLM.png"
+   },
+   "eclipse": {
+      "Set":"Shifting Sands",
+      "Type":"Utility",
+      "Activation":"Instant",
+      "Cost": 4,
+      "Text": "Reveal 3 mana cards from the mana deck, place them on any mix of your spells or your opponent's spells",
+      "Link": "https://i.imgur.com/GqQ8IYA.png"
+   },
+   "invisible friend": {
+      "Set":"Shifting Sands",
+      "Type":"Regeneration",
+      "Activation":"Instant",
+      "Cost": 2,
+      "Text": "Reveal 6 mana cards from the mana deck. Place the highest power mana back on the top of the mana deck. Gain the remaining 5 mana",
+      "Link": "https://i.imgur.com/DyqePQf.png"
+   },
+   "shadow oath": {
+      "Set":"Shifting Sands",
+      "Type":"Utility",
+      "Activation":"Instant",
+      "Cost": 1,
+      "Text": "Pick up a mana card off one of your other spells. Your opponent gains 1 mana card",
+      "Link": "https://i.imgur.com/ACZlSRG.png"
+   },
+   "symbiosis": {
+      "Set":"Shifting Sands",
+      "Type":"Regeneration",
+      "Activation":"Instant",
+      "Cost": 1,
+      "Text": "Gain a quantity of mana cards equal to the damage dealt by your opponent's previous basic attack",
+      "Link": "https://i.imgur.com/NW0WBE7.png"
+   },
+   "transfigure": {
+      "Set":"Shifting Sands",
+      "Type":"Regeneration",
+      "Activation":"Instant",
+      "Cost": 2,
+      "Text": "Gain 4 mana. You may choose to gain 1 less mana to destroy 1 of your spells that has no mana on it",
+      "Link": "https://i.imgur.com/8OpBdpO.png"
    }
 }
